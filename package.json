@@ -1,0 +1,27 @@
+{
+  "name": "cleancode-cleanarch",
+  "version": "1.0.0",
+  "description": "Curso de Clean Code e Clean Architecture com Rodrigo Branas - Turma 5",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && jest dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giangr21/cleanCode-cleanArch.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giangr21/cleanCode-cleanArch/issues"
+  },
+  "homepage": "https://github.com/giangr21/cleanCode-cleanArch#readme",
+  "dependencies": {
+    "typescript": "^4.5.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "jest": "^27.5.0"
+  }
+}
