@@ -1,4 +1,4 @@
-import Item from './Item';
+import Item from "./Item";
 
 export default class FreightCalculator {
   static calculate(item: Item, quantity: number) {
