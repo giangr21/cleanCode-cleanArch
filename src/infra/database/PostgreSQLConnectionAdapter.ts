@@ -5,8 +5,15 @@ export default class PostgreSQLConnectionAdapter implements Connection {
   connection: any;
 
   constructor() {
-    this.connection = pgp()("postgres://postgres:123456@localhost:5432/app");
+    this.connection = pgp()({
+      database: "teste_abs",
+      host: "servidor.jclan.com.br",
+      port: 5432,
+      user: "jclan",
+      password: "jcuser",
+    });
   }
+
   async close(): Promise<void> {
     this.connection.$pool.end();
   }
