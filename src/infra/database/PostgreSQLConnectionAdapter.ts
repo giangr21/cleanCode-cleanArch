@@ -22,3 +22,4 @@ export default class PostgreSQLConnectionAdapter implements Connection {
     return this.connection.query(stmt, params);
   }
 }
+``;

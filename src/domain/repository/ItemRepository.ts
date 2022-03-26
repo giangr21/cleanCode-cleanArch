@@ -1,5 +1,5 @@
-import Item from "../../domain/entity/Item";
+import Item from "../entity/Item";
 
 export default interface ItemRepository {
-  getById(idItem: number): Promise<Item | undefined>;
+	getById (idItem: number): Promise<Item | undefined>;
 }
