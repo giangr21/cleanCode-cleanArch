@@ -8,23 +8,23 @@ let connection: Connection;
 let repositoryFactory: RepositoryFactory;
 
 beforeEach(function () {
-	connection = new PostgreSQLConnectionAdapter();
-	repositoryFactory = new MemoryRepositoryFactory();
+  connection = new PostgreSQLConnectionAdapter();
+  repositoryFactory = new MemoryRepositoryFactory();
 });
 
 test("Deve simular o frete de um pedido", async function () {
-	const simulateFreight = new SimulateFreight(repositoryFactory);
-	const input = {
-		orderItems: [
-			{ idItem: 1, quantity: 1},
-			{ idItem: 2, quantity: 1},
-			{ idItem: 3, quantity: 3}
-		]
-	};
-	const output = await simulateFreight.execute(input);
-	expect(output.total).toBe(260);
+  const simulateFreight = new SimulateFreight(repositoryFactory);
+  const input = {
+    orderItems: [
+      { idItem: 1, quantity: 1 },
+      { idItem: 2, quantity: 1 },
+      { idItem: 3, quantity: 3 },
+    ],
+  };
+  const output = await simulateFreight.execute(input);
+  expect(output.total).toBe(260);
 });
 
 afterEach(async function () {
-	await connection.close();
+  await connection.close();
 });

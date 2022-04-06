@@ -1,3 +1,4 @@
+import GetOrderQuery from "../../src/application/query/GetOrderQuery";
 import GetOrder from "../../src/application/usecase/get-order/GetOrder";
 import PlaceOrder from "../../src/application/usecase/place-order/PlaceOrder";
 import RepositoryFactory from "../../src/domain/factory/RepositoryFactory";
@@ -28,7 +29,7 @@ test("Deve obter um pedido pelo código", async function () {
     issueDate: new Date("2021-03-01T10:00:00"),
   };
   await placeOrder.execute(input);
-  const getOrder = new GetOrder(repositoryFactory);
+  const getOrder = new GetOrderQuery(connection);
   const output = await getOrder.execute("202100000001");
   expect(output.total).toBe(5152);
 });
