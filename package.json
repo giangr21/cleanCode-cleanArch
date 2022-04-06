@@ -4,7 +4,7 @@
   "description": "Curso de Clean Code e Clean Architecture com Rodrigo Branas - Turma 5",
   "main": "index.js",
   "scripts": {
-    "test": "tsc && jest ./dist",
+    "test": "tsc && jest ./dist --runInBand",
     "main": "tsc && node ./dist/src/main"
   },
   "repository": {
